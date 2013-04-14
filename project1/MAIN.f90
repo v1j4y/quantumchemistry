@@ -8,5 +8,6 @@
       write(6,*)'@@@@@@@@  @@@@@@@ @@@@@@@   @@@@@@@@ @@@@@@@  @ '
     call INP
     call DIST
+    call ANGLES
 
     end
