@@ -1,13 +1,17 @@
     SUBROUTINE INP
     PARAMETER(natomax=20)
-    COMMON/coord/natom(natomax),x,y,z
+
     integer atoms
-    double precision xx(natomax),yy(natomax),zz(natomax)
-    double precision atyp(natomax)
-    double precision dist(natomax,natomax)
+!   double precision atyp(natomax)
+!   double precision xx(natomax),yy(natomax),zz(natomax)
+    double precision atyp
+    double precision xx,yy,zz
+!   double precision dist(natomax,natomax)
     logical :: yw
 
-    yw = .false.
+    common /coord/atyp(natomax),atoms,xx(natomax),yy(natomax),zz(natomax)
+
+    yw = .true.
 
     NAMELIST/input/atom,x,y,z
 
@@ -32,17 +36,4 @@
 
     enddo
 
-! ============================================================
-! reading inputs from .inp
-! ============================================================
-
-    do j=1,atoms
-        do i=j,atoms
-            dist(j,i)=sqrt( ((xx(i)-xx(j))**2) + ((yy(i)-yy(j))**2) &
-                        + ((zz(i)-zz(j))**2) )
-            write(6,1000)i,j,dist(j,i)
-        enddo
-    enddo
-
-1000 FORMAT(3x,('R(',I2,',',I2,')= ',F12.4))
     end
