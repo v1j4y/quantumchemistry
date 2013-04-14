@@ -1,7 +1,7 @@
 quantumchemistry
 ================
 
-Quantum Chemistry code in C !
+Quantum Chemistry code in F !
 
 Project 1 
 ----------
