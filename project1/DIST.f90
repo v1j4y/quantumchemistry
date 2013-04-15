@@ -23,6 +23,7 @@
     endif
 
     do j=1,atoms
+        write(6,*)'test'
         do i=j,atoms
 
             ddist(j,i)=sqrt( ((xx(i)-xx(j))**2) + ((yy(i)-yy(j))**2) &
