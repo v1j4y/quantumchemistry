@@ -3,6 +3,7 @@ SUBROUTINE ANGLES(atoms)
         PARAMETER(natomax=20)
         integer i,j
         integer atoms
+        real pi
         double precision atyp(natomax)
         double precision ex(natomax,natomax),ey(natomax,natomax),ez(natomax,natomax)
         double precision xx(natomax),yy(natomax),zz(natomax)
@@ -14,6 +15,8 @@ SUBROUTINE ANGLES(atoms)
 
         yw = .true.
 
+        pi=4*atan(1.0)
+        write(6,*)pi
         ddist=0
         ex=0
         ey=0
@@ -52,7 +55,8 @@ SUBROUTINE ANGLES(atoms)
         do i=1,atoms
             do k=1,atoms
 
-                theta(j,i,k)=ex(j,i)*ex(i,k)+ey(j,i)*ey(i,k)+ez(j,i)*ez(i,k)
+                theta(j,i,k)=(180.0/pi)*acos(ex(j,i)*ex(i,k)         &
+                +ey(j,i)*ey(i,k)+ez(j,i)*ez(i,k))
 
                 if(yw)then
                      write(6,1001)k,i,j,theta(j,i,k)
