@@ -2,18 +2,17 @@
     PARAMETER(natomax=20)
 
     integer atoms
-!   double precision atyp(natomax)
+    double precision atyp(natomax)
 !   double precision xx(natomax),yy(natomax),zz(natomax)
-    double precision atyp
-    double precision xx,yy,zz
+    double precision xx(natomax),yy(natomax),zz(natomax)
 !   double precision dist(natomax,natomax)
     logical :: yw
 
-    common /coord/atyp(natomax),atoms,xx(natomax),yy(natomax),zz(natomax)
+    common /coord/xx,yy,zz,atyp
 
     yw = .true.
 
-    NAMELIST/input/atom,x,y,z
+!   NAMELIST/input/atom,x,y,z
 
     open(unit=11,status='old',file='geo.inp',form='formatted')
 !   open(unit=20,status='new',file='main.out',form='formatted')
@@ -35,5 +34,8 @@
     endif
 
     enddo
+
+    call DIST(atoms)
+    call ANGLES(atoms)
 
     end
