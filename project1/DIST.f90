@@ -10,7 +10,7 @@
 
     common /coord/xx,yy,zz,atyp
 
-    yw=.true.
+    yw=.false.
 
 
 ! ============================================================
@@ -23,10 +23,14 @@
     endif
 
     do j=1,atoms
-        do i=j,atoms
+        do i=1,j
 
             ddist(j,i)=sqrt( ((xx(i)-xx(j))**2) + ((yy(i)-yy(j))**2) &
                         + ((zz(i)-zz(j))**2) )
+
+            if(ddist(j,i).ne.0)then
+                write(6,1000)j-1,i-1,ddist(j,i)
+            endif
             if(yw)then
                 write(6,1000)i,j,ddist(j,i)
             endif
