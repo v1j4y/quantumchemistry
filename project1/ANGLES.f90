@@ -15,7 +15,7 @@ SUBROUTINE ANGLES(atoms)
 
         yw = .true.
 
-        pi=4*atan(1.0)
+        pi=acos(-1.0)
         write(6,*)pi
         ddist=0
         ex=0
