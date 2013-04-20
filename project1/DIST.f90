@@ -16,8 +16,8 @@
 ! ============================================================
 ! calculating distances R_ij
 ! ============================================================
-    if(yw)then
         write(6,*)'In DIST'
+    if(yw)then
 !       write(6,*)atoms
 !       write(6,*)xx(2)
     endif
