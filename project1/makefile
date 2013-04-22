@@ -13,6 +13,7 @@ MAIN.o\
 DIST.o\
 ANGLES.o\
 MOLDEN.o\
+HUCKEL.o\
 INP.o
 
 .f90.o:

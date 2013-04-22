@@ -11,7 +11,8 @@
         common /coord/xx,yy,zz,atyp
 
         yw = .true.
-        BTA = 0.529177d0
+!       BTA = 0.529177d0
+        BTA = 1.000000d0
 
         open(unit=33,status='new',file='geo.molden',form='formatted')
 
