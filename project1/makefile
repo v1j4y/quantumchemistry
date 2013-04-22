@@ -12,6 +12,7 @@ OBJS = \
 MAIN.o\
 DIST.o\
 ANGLES.o\
+MOLDEN.o\
 INP.o
 
 .f90.o:
