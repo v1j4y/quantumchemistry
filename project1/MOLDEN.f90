@@ -64,7 +64,7 @@
             do j=1,3*N
                 if(j-(INT(j/3)*3).eq.0)then
                     k=k+1
-                    write(33,*)j,(EVEC(k,i)*04.d0)
+                    write(33,*)j,(EVEC(k,i)*01.d0)
                 else
                     write(33,*)j,'0.00000000'
                 endif
