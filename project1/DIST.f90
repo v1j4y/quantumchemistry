@@ -1,5 +1,5 @@
     SUBROUTINE DIST(atoms)
-    PARAMETER(natomax=40)
+    PARAMETER(natomax=400)
 
     logical :: yw
     integer i,j

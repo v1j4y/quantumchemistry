@@ -1,6 +1,6 @@
         SUBROUTINE ANGLES(atoms)
 
-        PARAMETER(natomax=40)
+        PARAMETER(natomax=400)
         integer i,j
         integer atoms
         real pi,edote

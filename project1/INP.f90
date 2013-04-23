@@ -1,5 +1,5 @@
     SUBROUTINE INP
-    PARAMETER(natomax=40)
+    PARAMETER(natomax=400)
 
     integer atoms
     double precision atyp(natomax)

@@ -1,5 +1,5 @@
         SUBROUTINE HUCKEL(atoms)
-        PARAMETER(natomax=40)
+        PARAMETER(natomax=400)
 
         integer atoms
         double precision atyp(natomax)
@@ -46,7 +46,7 @@
                         + ((zz(i)-zz(j))**2) )
             ddist(i,j)=ddist(j,i)
                 if(atyp(i).eq.6 .and. atyp(j).eq.6)then
-                    if(ddist(j,i).le.1.6199d0 .and. i.ne.j)then
+                    if(ddist(j,i).le.1.6809d0 .and. i.ne.j)then
                         matH(j,i)=1.d0
                         matH(i,j)=matH(j,i)
                     elseif(i.eq.j)then
