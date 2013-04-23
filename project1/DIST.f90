@@ -12,7 +12,7 @@
 
     yw=.false.
 
-    open(unit=66,status='new',file='dist.dat',form='formatted')
+    open(unit=66,status='unknown',file='dist.dat',form='formatted')
 
 ! ============================================================
 ! calculating distances R_ij
@@ -40,6 +40,6 @@
         enddo
     enddo
 
-1000 FORMAT(3x,('R(',I2,',',I2,') = ',F12.4))
+1000 FORMAT(3x,('R(',I3,',',I3,') = ',F12.4))
 
     end

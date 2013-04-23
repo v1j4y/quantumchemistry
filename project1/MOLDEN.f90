@@ -60,7 +60,12 @@
         do i=1,N
             write(33,*)'Ene=',(1d0*EVAL(i))
             write(33,*)'Spin= Alpha'
-            write(33,*)'Occup= 2.000'
+            if(i.le.N/2)then
+                write(33,*)'Occup= 2.000'
+            else
+                write(33,*)'Occup= 0.000'
+            endif
+
             do j=1,3*N
                 if(j-(INT(j/3)*3).eq.0)then
                     k=k+1
@@ -87,5 +92,5 @@
                 ,xx(i)*BTA,yy(i)*BTA,zz(i)*BTA
         enddo
 
-1002 FORMAT(3x,(A,' ',I2,' ',I2,F12.4,F12.4,F12.4))
+1002 FORMAT(3x,(A,' ',I3,' ',I3,F12.4,F12.4,F12.4))
         end
