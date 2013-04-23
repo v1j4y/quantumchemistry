@@ -1,5 +1,5 @@
         SUBROUTINE MOLDEN(atoms)
-        PARAMETER(natomax=20)
+        PARAMETER(natomax=40)
 
         integer atoms,N,k
         double precision BTA                ! Bohrs to Angs
@@ -37,6 +37,17 @@
         write(6,*)N
 
         write(33,*)'[Molden Format]'
+        write(33,*)'[GTO]'
+! ============================================================
+! writing basis (only p orbitals)
+! ============================================================
+        do i=1,N
+            write(33,*)i
+            write(33,*)'p 3 1.00'
+            write(33,*)'   5.0331513 0.1559162700'
+            write(33,*)'   1.1695961 0.6076837200'
+            write(33,*)'   0.3803890 0.3919573900'
+        enddo
         write(33,*)'[MO]'
         do i=1,N
             read(51,*)j,EVAL(i)
@@ -47,7 +58,7 @@
         enddo
 
         do i=1,N
-            write(33,*)'Ene=',(-1d0*EVAL(i))
+            write(33,*)'Ene=',(1d0*EVAL(i))
             write(33,*)'Spin= Alpha'
             write(33,*)'Occup= 2.000'
             do j=1,3*N
@@ -62,7 +73,7 @@
         enddo
 
 
-        write(33,*)'[Atoms] AU'
+        write(33,*)'[Atoms] Angs'
         do i=1,atoms
             if(atyp(i).eq.1)then
                 atm='H'
