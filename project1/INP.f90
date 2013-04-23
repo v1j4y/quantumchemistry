@@ -37,7 +37,7 @@
 
     call DIST(atoms)
     call ANGLES(atoms)
-    call MOLDEN(atoms)
     call HUCKEL(atoms)
+    call MOLDEN(atoms)
 
     end

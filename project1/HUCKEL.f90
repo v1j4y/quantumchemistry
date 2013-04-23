@@ -22,6 +22,8 @@
 !
         common /coord/xx,yy,zz,atyp
 
+        common /HUCKL/N
+
         yw = .true.
 
         open(unit=44,status='new',file='matH.dat',form='formatted')
@@ -44,7 +46,7 @@
                         + ((zz(i)-zz(j))**2) )
             ddist(i,j)=ddist(j,i)
                 if(atyp(i).eq.6 .and. atyp(j).eq.6)then
-                    if(ddist(j,i).le.2d0 .and. i.ne.j)then
+                    if(ddist(j,i).le.3d0 .and. i.ne.j)then
                         matH(j,i)=1.d0
                         matH(i,j)=matH(j,i)
                     elseif(i.eq.j)then
@@ -99,11 +101,13 @@
           enddo
 
           do i=1,N
-            write(52,1022)i,(A(i,j),j=1,5)
+            write(52,1022)i,(A(i,j),j=1,N)
           enddo
 
+        close(51)
+        close(52)
 
 1003  FORMAT(3X,F12.4,$)
-1022 FORMAT(3x,I5,15(2x,F12.8))
+1022  FORMAT(3x,I5,15(2x,F12.8))
         end
 
