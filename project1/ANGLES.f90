@@ -1,6 +1,6 @@
-SUBROUTINE ANGLES(atoms)
+        SUBROUTINE ANGLES(atoms)
 
-        PARAMETER(natomax=20)
+        PARAMETER(natomax=400)
         integer i,j
         integer atoms
         real pi,edote
@@ -73,7 +73,7 @@ SUBROUTINE ANGLES(atoms)
               if(yw)then
                    write(6,1001)j-1,i-1,k-1,theta(j,i,k)
               endif
-            
+
 !             write(6,*)ddist(i,k),i-1,k-1
 
               endif
@@ -87,7 +87,7 @@ SUBROUTINE ANGLES(atoms)
     enddo
 
 
-1000 FORMAT(3x,('R(',I2,',',I2,') = ',F12.2))
-1001 FORMAT(3x,('A(',I2,',',I2,',',I2,') = ',F12.4))
+1000 FORMAT(3x,('R(',I3,',',I3,') = ',F12.2))
+1001 FORMAT(3x,('A(',I3,',',I3,',',I3,') = ',F12.4))
 
     end
