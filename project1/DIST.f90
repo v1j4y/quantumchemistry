@@ -1,5 +1,5 @@
     SUBROUTINE DIST(atoms)
-    PARAMETER(natomax=20)
+    PARAMETER(natomax=400)
 
     logical :: yw
     integer i,j
@@ -12,6 +12,7 @@
 
     yw=.false.
 
+    open(unit=66,status='unknown',file='dist.dat',form='formatted')
 
 ! ============================================================
 ! calculating distances R_ij
@@ -30,13 +31,15 @@
 
             if(ddist(j,i).ne.0)then
                 write(6,1000)j-1,i-1,ddist(j,i)
+                write(66,1000)j-1,i-1,ddist(j,i)
             endif
             if(yw)then
                 write(6,1000)i,j,ddist(j,i)
+                write(66,1000)i,j,ddist(j,i)
             endif
         enddo
     enddo
 
-1000 FORMAT(3x,('R(',I2,',',I2,') = ',F12.4))
+1000 FORMAT(3x,('R(',I3,',',I3,') = ',F12.4))
 
     end
