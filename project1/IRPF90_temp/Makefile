@@ -1,5 +1,5 @@
 IRPF90 = irpf90  #-a -d
-FC     = gfortran
+FC     = ifort
 FCFLAGS= -O2
 
 SRC=
