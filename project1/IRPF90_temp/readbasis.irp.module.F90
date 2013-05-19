@@ -7,4 +7,6 @@
 !-----------------------------------------------!
 
 module readbasis_mod
+  integer :: ngauss 
+  logical :: ngauss_is_built = .False.
 end module readbasis_mod

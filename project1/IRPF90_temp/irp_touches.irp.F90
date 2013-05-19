@@ -1,3 +1,9 @@
+subroutine touch_ngauss
+  Use readbasis_mod
+  implicit none
+  ngauss_is_built = .True.
+end subroutine touch_ngauss
+
 subroutine irp_finalize_1733191211
  use MOLDEN_mod
  use readbasis_mod

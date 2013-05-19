@@ -30,4 +30,5 @@
     call ANGLES(atoms)                                                  ! INP.irp.f:  39
     call HUCKEL(atoms)                                                  ! INP.irp.f:  40
     call MOLDEN(atoms)                                                  ! INP.irp.f:  41
+                                                                        ! INP.irp.f:  41
 end                                                                     ! INP.irp.f:  43

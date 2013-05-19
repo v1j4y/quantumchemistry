@@ -9,7 +9,7 @@ all:$(ALL)
 MAIN: IRPF90_temp/MAIN.irp.o IRPF90_temp/MAIN.irp.module.o $(OBJ1)
 	$(FC) -o $@ IRPF90_temp/$@.irp.o IRPF90_temp/$@.irp.module.o $(OBJ1) $(LIB)
 	@$(MAKE) -s move
-IRPF90_temp/MOLDEN.irp.o: IRPF90_temp/MOLDEN.irp.module.o  
+IRPF90_temp/MOLDEN.irp.o: IRPF90_temp/MOLDEN.irp.module.o  IRPF90_temp/readbasis.irp.module.o 
 IRPF90_temp/readbasis.irp.o: IRPF90_temp/readbasis.irp.module.o  IRPF90_temp/basis.irp.module.o 
 IRPF90_temp/BETA.irp.o: IRPF90_temp/BETA.irp.module.o  
 IRPF90_temp/MAIN.irp.o: IRPF90_temp/MAIN.irp.module.o  
