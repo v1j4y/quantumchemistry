@@ -37,5 +37,6 @@
 
     call DIST(atoms)
     call ANGLES(atoms)
+    call VIBRA(atoms)
 
     end
