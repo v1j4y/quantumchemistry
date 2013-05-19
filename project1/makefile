@@ -12,7 +12,12 @@ OBJS = \
 MAIN.o\
 DIST.o\
 ANGLES.o\
+<<<<<<< HEAD
 VIBRA.o\
+=======
+MOLDEN.o\
+HUCKEL.o\
+>>>>>>> upstream/orbitalsbasis
 INP.o
 
 .f90.o:
