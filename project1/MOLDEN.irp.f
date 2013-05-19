@@ -30,7 +30,7 @@
 
 !       write(6,*)'test'
 !       print *,'basis=',basis
-        call readbasis
+        touch coeff
 ! ============================================================
 ! writing molden file in Angs
 ! ============================================================

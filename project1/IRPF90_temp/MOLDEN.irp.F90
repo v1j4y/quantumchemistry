@@ -29,7 +29,6 @@
             ,form='formatted') ! MOLDEN.irp.f:  26
         open(unit=52,status='old',file='eigenvec.dat'&
             ,form='formatted') ! MOLDEN.irp.f:  28
-        call readbasis                                               ! MOLDEN.irp.f:  33
         write(6,*)N                                                  ! MOLDEN.irp.f:  40
         write(33,*)'[Molden Format]'                                 ! MOLDEN.irp.f:  42
         write(33,*)'[GTO]'                                           ! MOLDEN.irp.f:  43
