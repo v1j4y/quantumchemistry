@@ -1,3 +1,4 @@
 basis.irp.f               : character, allocatable    :: basis                     (1)
 BETA.irp.f                : double precision          :: beta                      
+nucrep.irp.f              : double precision          :: enuc                      
 readbasis.irp.f           : integer                   :: ngauss                    

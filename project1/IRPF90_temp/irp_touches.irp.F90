@@ -11,6 +11,7 @@ subroutine irp_finalize_1733191211
  use HUCKEL_mod
  use DIST_mod
  use basis_mod
+ use nucrep_mod
  use INP_mod
  use ANGLES_mod
   if (allocated(basis)) then
