@@ -1,5 +1,5 @@
     SUBROUTINE INP
-    PARAMETER(natomax=20)
+    PARAMETER(natomax=400)
 
     integer atoms
     double precision atyp(natomax)
@@ -37,6 +37,7 @@
 
     call DIST(atoms)
     call ANGLES(atoms)
+    call HUCKEL(atoms)
     call MOLDEN(atoms)
 
     end
