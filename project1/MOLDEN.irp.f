@@ -5,7 +5,7 @@
         double precision BTA                ! Bohrs to Angs
         double precision atyp(natomax)
         double precision xx(natomax),yy(natomax),zz(natomax)
-        logical :: yw
+        logical :: yw,is_open
         character atm
         double precision, allocatable :: EVAL(:),EVEC(:,:)
 
@@ -22,7 +22,10 @@
         allocate (EVEC(N,N))
 
         write(6,*)'IN MOLDEN'
-        open(unit=33,status='new',file='geo.molden',form='formatted')
+        inquire(unit=33,opened=is_open)
+        if(.not.is_open)then
+            open(unit=33,status='new',file='geo.molden',form='formatted')
+        endif
         open(unit=51,status='old',file='eigenval.dat'&
             ,form='formatted')
         open(unit=52,status='old',file='eigenvec.dat'&
@@ -30,7 +33,6 @@
 
 !       write(6,*)'test'
 !       print *,'basis=',basis
-        call readbasis
 ! ============================================================
 ! writing molden file in Angs
 ! ============================================================
@@ -39,13 +41,13 @@
 
         write(6,*)N
 
-        write(33,*)'[Molden Format]'
-        write(33,*)'[GTO]'
+        touch ngauss
 ! ============================================================
 ! writing basis (only p orbitals)
 ! ============================================================
         do i=1,N
-            write(33,*)i
+!           write(33,*)i
+!           write(33,*)'p   ',ngauss,' 1.00'
 !           write(33,*)'p   3 1.00'
 !           write(33,*)'      2.9412494     0.1559162700'
 !           write(33,*)'      0.6834831     0.6076837200'
@@ -73,12 +75,12 @@
 ! ============================================================
 ! aug-cc-pVDZ
 ! ============================================================
-            write(33,*)'p   5 3 1.00'
-        write(33,*)'      9.4390000  0.03810900  0.00000000  0.00000000'
-        write(33,*)'      2.0020000  0.20948000  0.00000000  0.00000000'
-        write(33,*)'      0.5456000  0.50855700  0.00000000  0.00000000'
-        write(33,*)'      0.1517000  0.46884200  1.00000000  0.00000000'
-        write(33,*)'      0.0404100  0.00000000  0.00000000  1.00000000'
+!           write(33,*)'p   5 3 1.00'
+!       write(33,*)'      9.4390000  0.03810900  0.00000000  0.00000000'
+!       write(33,*)'      2.0020000  0.20948000  0.00000000  0.00000000'
+!       write(33,*)'      0.5456000  0.50855700  0.00000000  0.00000000'
+!       write(33,*)'      0.1517000  0.46884200  1.00000000  0.00000000'
+!       write(33,*)'      0.0404100  0.00000000  0.00000000  1.00000000'
 
         enddo
         write(33,*)'[MO]'

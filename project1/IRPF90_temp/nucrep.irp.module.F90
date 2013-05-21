@@ -6,7 +6,7 @@
 !           DO NOT MODIFY IT BY HAND            !
 !-----------------------------------------------!
 
-module readbasis_mod
-  integer :: ngauss 
-  logical :: ngauss_is_built = .False.
-end module readbasis_mod
+module nucrep_mod
+  double precision :: enuc 
+  logical :: enuc_is_built = .False.
+end module nucrep_mod

@@ -8,3 +8,6 @@ character, allocatable	:: basis	(1)
 .SH File
 .P
 basis.irp.f
+.SH Needed by
+ngauss
+.br

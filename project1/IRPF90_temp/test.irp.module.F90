@@ -6,7 +6,5 @@
 !           DO NOT MODIFY IT BY HAND            !
 !-----------------------------------------------!
 
-module readbasis_mod
-  integer :: ngauss 
-  logical :: ngauss_is_built = .False.
-end module readbasis_mod
+module test_mod
+end module test_mod
