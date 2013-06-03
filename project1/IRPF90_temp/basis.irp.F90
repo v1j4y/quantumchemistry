@@ -7,11 +7,15 @@
 !-----------------------------------------------!
 
 subroutine provide_basis
+  use atoms_mod
   use basis_mod
   implicit none
   character*(13) :: irp_here = 'provide_basis'
   integer                   :: irp_err 
   logical                   :: irp_dimensions_OK
+  if (.not.atoms_is_built) then
+    call provide_atoms
+  endif
  if (allocated (basis) ) then
   irp_dimensions_OK = .True.
   irp_dimensions_OK = irp_dimensions_OK.AND.(SIZE(basis,1)==(1))
@@ -46,9 +50,11 @@ subroutine provide_basis
 end subroutine provide_basis
 
 subroutine bld_basis
+  use atoms_mod
   use basis_mod
     implicit none                                                     ! basis.irp.f:   5
   character*(5) :: irp_here = 'basis'                                 ! basis.irp.f:   1
     print *,'basis?'                                                  ! basis.irp.f:   7
     basis='S'                                                         ! basis.irp.f:   8
+    print *, 'atoms',atoms                                            ! basis.irp.f:   9
 end subroutine bld_basis

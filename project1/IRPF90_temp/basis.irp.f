@@ -6,6 +6,7 @@ BEGIN_PROVIDER [character, basis, (1)]
 
     print *,'basis?'
     basis='S'
+    print *, 'atoms',atoms
 !   print *,basis
 !   print *,'STO3G'
 

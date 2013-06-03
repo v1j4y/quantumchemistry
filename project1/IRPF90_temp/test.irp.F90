@@ -23,4 +23,5 @@ subroutine test                                                        ! test.ir
   endif
     print *, 'basis=',basis                                            ! test.irp.f:   3
     print *, enuc                                                      ! test.irp.f:   4
-end                                                                    ! test.irp.f:   5
+    call printbasis                                                    ! test.irp.f:   5
+end                                                                    ! test.irp.f:   6

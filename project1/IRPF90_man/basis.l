@@ -8,6 +8,9 @@ character, allocatable	:: basis	(1)
 .SH File
 .P
 basis.irp.f
+.SH Needs
+atoms
+.br
 .SH Needed by
 ngauss
 .br

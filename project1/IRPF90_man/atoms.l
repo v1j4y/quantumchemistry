@@ -8,3 +8,6 @@ integer	:: atoms
 .SH File
 .P
 atoms.irp.f
+.SH Needed by
+basis
+.br

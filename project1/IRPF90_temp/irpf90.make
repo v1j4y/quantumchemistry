@@ -1,5 +1,5 @@
-SRC += IRPF90_temp/irp_stack.irp.F90 IRPF90_temp/irp_touches.irp.F90 IRPF90_temp/MOLDEN.irp.F90 IRPF90_temp/MOLDEN.irp.module.F90 IRPF90_temp/readbasis.irp.F90 IRPF90_temp/readbasis.irp.module.F90 IRPF90_temp/BETA.irp.F90 IRPF90_temp/BETA.irp.module.F90 IRPF90_temp/MAIN.irp.F90 IRPF90_temp/MAIN.irp.module.F90 IRPF90_temp/HUCKEL.irp.F90 IRPF90_temp/HUCKEL.irp.module.F90 IRPF90_temp/DIST.irp.F90 IRPF90_temp/DIST.irp.module.F90 IRPF90_temp/test.irp.F90 IRPF90_temp/test.irp.module.F90 IRPF90_temp/atoms.irp.F90 IRPF90_temp/atoms.irp.module.F90 IRPF90_temp/basis.irp.F90 IRPF90_temp/basis.irp.module.F90 IRPF90_temp/nucrep.irp.F90 IRPF90_temp/nucrep.irp.module.F90 IRPF90_temp/INP.irp.F90 IRPF90_temp/INP.irp.module.F90 IRPF90_temp/ANGLES.irp.F90 IRPF90_temp/ANGLES.irp.module.F90
-OBJ += IRPF90_temp/irp_stack.irp.o IRPF90_temp/MOLDEN.irp.o IRPF90_temp/MOLDEN.irp.module.o IRPF90_temp/readbasis.irp.o IRPF90_temp/readbasis.irp.module.o IRPF90_temp/BETA.irp.o IRPF90_temp/BETA.irp.module.o IRPF90_temp/HUCKEL.irp.o IRPF90_temp/HUCKEL.irp.module.o IRPF90_temp/DIST.irp.o IRPF90_temp/DIST.irp.module.o IRPF90_temp/atoms.irp.o IRPF90_temp/atoms.irp.module.o IRPF90_temp/basis.irp.o IRPF90_temp/basis.irp.module.o IRPF90_temp/nucrep.irp.o IRPF90_temp/nucrep.irp.module.o IRPF90_temp/INP.irp.o IRPF90_temp/INP.irp.module.o IRPF90_temp/ANGLES.irp.o IRPF90_temp/ANGLES.irp.module.o
+SRC += IRPF90_temp/irp_stack.irp.F90 IRPF90_temp/irp_touches.irp.F90 IRPF90_temp/MOLDEN.irp.F90 IRPF90_temp/MOLDEN.irp.module.F90 IRPF90_temp/printbasis.irp.F90 IRPF90_temp/printbasis.irp.module.F90 IRPF90_temp/BETA.irp.F90 IRPF90_temp/BETA.irp.module.F90 IRPF90_temp/MAIN.irp.F90 IRPF90_temp/MAIN.irp.module.F90 IRPF90_temp/HUCKEL.irp.F90 IRPF90_temp/HUCKEL.irp.module.F90 IRPF90_temp/DIST.irp.F90 IRPF90_temp/DIST.irp.module.F90 IRPF90_temp/test.irp.F90 IRPF90_temp/test.irp.module.F90 IRPF90_temp/atoms.irp.F90 IRPF90_temp/atoms.irp.module.F90 IRPF90_temp/basis.irp.F90 IRPF90_temp/basis.irp.module.F90 IRPF90_temp/nucrep.irp.F90 IRPF90_temp/nucrep.irp.module.F90 IRPF90_temp/readbasis.irp.F90 IRPF90_temp/readbasis.irp.module.F90 IRPF90_temp/INP.irp.F90 IRPF90_temp/INP.irp.module.F90 IRPF90_temp/ANGLES.irp.F90 IRPF90_temp/ANGLES.irp.module.F90
+OBJ += IRPF90_temp/irp_stack.irp.o IRPF90_temp/MOLDEN.irp.o IRPF90_temp/MOLDEN.irp.module.o IRPF90_temp/printbasis.irp.o IRPF90_temp/printbasis.irp.module.o IRPF90_temp/BETA.irp.o IRPF90_temp/BETA.irp.module.o IRPF90_temp/HUCKEL.irp.o IRPF90_temp/HUCKEL.irp.module.o IRPF90_temp/DIST.irp.o IRPF90_temp/DIST.irp.module.o IRPF90_temp/atoms.irp.o IRPF90_temp/atoms.irp.module.o IRPF90_temp/basis.irp.o IRPF90_temp/basis.irp.module.o IRPF90_temp/nucrep.irp.o IRPF90_temp/nucrep.irp.module.o IRPF90_temp/readbasis.irp.o IRPF90_temp/readbasis.irp.module.o IRPF90_temp/INP.irp.o IRPF90_temp/INP.irp.module.o IRPF90_temp/ANGLES.irp.o IRPF90_temp/ANGLES.irp.module.o
 OBJ1 = $(patsubst %, IRPF90_temp/%,$(notdir $(OBJ))) IRPF90_temp/irp_touches.irp.o 
 ALL = MAIN test
 ALL_OBJ = MAIN.irp.module.o MAIN.irp.o test.irp.module.o test.irp.o
@@ -12,19 +12,20 @@ MAIN: IRPF90_temp/MAIN.irp.o IRPF90_temp/MAIN.irp.module.o $(OBJ1)
 test: IRPF90_temp/test.irp.o IRPF90_temp/test.irp.module.o $(OBJ1)
 	$(FC) -o $@ IRPF90_temp/$@.irp.o IRPF90_temp/$@.irp.module.o $(OBJ1) $(LIB)
 	@$(MAKE) -s move
-IRPF90_temp/MOLDEN.irp.o: IRPF90_temp/MOLDEN.irp.module.o  IRPF90_temp/readbasis.irp.module.o  IRPF90_temp/atoms.irp.module.o 
-IRPF90_temp/readbasis.irp.o: IRPF90_temp/readbasis.irp.module.o  IRPF90_temp/basis.irp.module.o 
+IRPF90_temp/MOLDEN.irp.o: IRPF90_temp/MOLDEN.irp.module.o  IRPF90_temp/atoms.irp.module.o 
+IRPF90_temp/printbasis.irp.o: IRPF90_temp/printbasis.irp.module.o  IRPF90_temp/atoms.irp.module.o  IRPF90_temp/basis.irp.module.o 
 IRPF90_temp/BETA.irp.o: IRPF90_temp/BETA.irp.module.o  
 IRPF90_temp/MAIN.irp.o: IRPF90_temp/MAIN.irp.module.o  
 IRPF90_temp/HUCKEL.irp.o: IRPF90_temp/HUCKEL.irp.module.o  IRPF90_temp/atoms.irp.module.o  IRPF90_temp/BETA.irp.module.o 
 IRPF90_temp/DIST.irp.o: IRPF90_temp/DIST.irp.module.o  IRPF90_temp/atoms.irp.module.o 
 IRPF90_temp/test.irp.o: IRPF90_temp/test.irp.module.o  IRPF90_temp/basis.irp.module.o  IRPF90_temp/nucrep.irp.module.o 
 IRPF90_temp/atoms.irp.o: IRPF90_temp/atoms.irp.module.o  
-IRPF90_temp/basis.irp.o: IRPF90_temp/basis.irp.module.o  
+IRPF90_temp/basis.irp.o: IRPF90_temp/basis.irp.module.o  IRPF90_temp/atoms.irp.module.o 
 IRPF90_temp/nucrep.irp.o: IRPF90_temp/nucrep.irp.module.o  
+IRPF90_temp/readbasis.irp.o: IRPF90_temp/readbasis.irp.module.o  IRPF90_temp/basis.irp.module.o 
 IRPF90_temp/INP.irp.o: IRPF90_temp/INP.irp.module.o  IRPF90_temp/atoms.irp.module.o 
 IRPF90_temp/ANGLES.irp.o: IRPF90_temp/ANGLES.irp.module.o  IRPF90_temp/atoms.irp.module.o 
-IRPF90_temp/irp_touches.irp.o:  IRPF90_temp/MOLDEN.irp.o IRPF90_temp/MOLDEN.irp.o  IRPF90_temp/readbasis.irp.o IRPF90_temp/readbasis.irp.o  IRPF90_temp/BETA.irp.o IRPF90_temp/BETA.irp.o  IRPF90_temp/HUCKEL.irp.o IRPF90_temp/HUCKEL.irp.o  IRPF90_temp/DIST.irp.o IRPF90_temp/DIST.irp.o  IRPF90_temp/atoms.irp.o IRPF90_temp/atoms.irp.o  IRPF90_temp/basis.irp.o IRPF90_temp/basis.irp.o  IRPF90_temp/nucrep.irp.o IRPF90_temp/nucrep.irp.o  IRPF90_temp/INP.irp.o IRPF90_temp/INP.irp.o  IRPF90_temp/ANGLES.irp.o IRPF90_temp/ANGLES.irp.o
+IRPF90_temp/irp_touches.irp.o:  IRPF90_temp/MOLDEN.irp.o IRPF90_temp/MOLDEN.irp.o  IRPF90_temp/printbasis.irp.o IRPF90_temp/printbasis.irp.o  IRPF90_temp/BETA.irp.o IRPF90_temp/BETA.irp.o  IRPF90_temp/HUCKEL.irp.o IRPF90_temp/HUCKEL.irp.o  IRPF90_temp/DIST.irp.o IRPF90_temp/DIST.irp.o  IRPF90_temp/atoms.irp.o IRPF90_temp/atoms.irp.o  IRPF90_temp/basis.irp.o IRPF90_temp/basis.irp.o  IRPF90_temp/nucrep.irp.o IRPF90_temp/nucrep.irp.o  IRPF90_temp/readbasis.irp.o IRPF90_temp/readbasis.irp.o  IRPF90_temp/INP.irp.o IRPF90_temp/INP.irp.o  IRPF90_temp/ANGLES.irp.o IRPF90_temp/ANGLES.irp.o
 IRPF90_temp/%.irp.module.o: IRPF90_temp/%.irp.module.F90
 	$(FC) $(FCFLAGS) -c IRPF90_temp/$*.irp.module.F90 -o IRPF90_temp/$*.irp.module.o
 IRPF90_temp/%.irp.o: IRPF90_temp/%.irp.module.o IRPF90_temp/%.irp.F90

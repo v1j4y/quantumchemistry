@@ -26,6 +26,9 @@
         if(.not.is_open)then
             open(unit=33,status='new',file='geo.molden',form='formatted')
         endif
+        write(33,*)'[Molden Format]'
+        write(33,*)'[GTO]'
+        write(33,*)''
         open(unit=51,status='old',file='eigenval.dat'&
             ,form='formatted')
         open(unit=52,status='old',file='eigenvec.dat'&
@@ -41,7 +44,6 @@
 
         write(6,*)N
 
-        touch ngauss
 ! ============================================================
 ! writing basis (only p orbitals)
 ! ============================================================

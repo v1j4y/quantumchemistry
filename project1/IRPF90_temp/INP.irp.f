@@ -14,6 +14,8 @@
 !   NAMELIST/input/atom,x,y,z
 
     open(unit=11,status='old',file='geo.inp',form='formatted')
+    open(unit=200,status='new',file='dist.dat',form='formatted')
+    open(unit=201,status='new',file='atyp.dat',form='formatted')
 !   open(unit=20,status='new',file='main.out',form='formatted')
 
     write(6,*)'reading input'
@@ -28,6 +30,8 @@
 
     read(11,*)atyp(j),xx(j),yy(j),zz(j)
 
+        write(200,*)xx(j),yy(j),zz(j)
+        write(201,*)atyp(j)
     if(yw)then
         write(6,*)xx(j),yy(j),zz(j)
     endif
@@ -36,7 +40,7 @@
 
     call DIST
     call ANGLES
-    call HUCKEL
+!   call HUCKEL
     call MOLDEN
 
     end
