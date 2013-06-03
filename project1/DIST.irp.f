@@ -1,9 +1,8 @@
-    SUBROUTINE DIST(atoms)
+    SUBROUTINE DIST
     PARAMETER(natomax=400)
 
     logical :: yw
     integer i,j
-    integer atoms
     double precision atyp(natomax)
     double precision xx(natomax),yy(natomax),zz(natomax)
     double precision ddist(natomax,natomax)

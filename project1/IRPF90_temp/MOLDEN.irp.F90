@@ -6,12 +6,13 @@
 !           DO NOT MODIFY IT BY HAND            !
 !-----------------------------------------------!
 
-        SUBROUTINE MOLDEN(atoms)                                     ! MOLDEN.irp.f:   1
+        SUBROUTINE MOLDEN                                            ! MOLDEN.irp.f:   1
  use readbasis_mod                                                   ! MOLDEN.irp.f:  44
   use readbasis_mod
+  use atoms_mod
   character*(6) :: irp_here = 'molden'                               ! MOLDEN.irp.f:   1
         PARAMETER(natomax=400)                                       ! MOLDEN.irp.f:   2
-        integer atoms,N,k                                            ! MOLDEN.irp.f:   4
+        integer N,k                                                  ! MOLDEN.irp.f:   4
         double precision BTA                                         ! MOLDEN.irp.f:   5
         double precision atyp(natomax)                               ! MOLDEN.irp.f:   6
         double precision xx(natomax),yy(natomax),zz(natomax)         ! MOLDEN.irp.f:   7
@@ -20,6 +21,9 @@
         double precision, allocatable :: EVAL(:),EVEC(:,:)           ! MOLDEN.irp.f:  10
         common /coord/xx,yy,zz,atyp                                  ! MOLDEN.irp.f:  12
         common /HUCKL/N                                              ! MOLDEN.irp.f:  14
+  if (.not.atoms_is_built) then
+    call provide_atoms
+  endif
   if (.not.ngauss_is_built) then
     call provide_ngauss
   endif
@@ -42,6 +46,9 @@
 ! >>> TOUCH ngauss                                                   ! MOLDEN.irp.f:  44
  call touch_ngauss                                                   ! MOLDEN.irp.f:  44
 ! <<< END TOUCH                                                      ! MOLDEN.irp.f:  44
+  if (.not.atoms_is_built) then
+    call provide_atoms
+  endif
   if (.not.ngauss_is_built) then
     call provide_ngauss
   endif

@@ -15,7 +15,6 @@ subroutine main                                                        ! MAIN.ir
     PARAMETER (natomax=20)                                             ! MAIN.irp.f:   2
     double precision xx(natomax),yy(natomax),zz(natomax)               ! MAIN.irp.f:   3
     common /coord/xx,yy,zz                                             ! MAIN.irp.f:   5
-    common /attype/atoms,atype                                         ! MAIN.irp.f:   6
       write(6,*)'@@@@@@@@  @@@@@@@ @@@@@@@   @@@@@@@@ @@@@@@@  @ '     ! MAIN.irp.f:   8
       write(6,*)'               start'                                 ! MAIN.irp.f:   9
       write(6,*)'@@@@@@@@  @@@@@@@ @@@@@@@   @@@@@@@@ @@@@@@@  @ '     ! MAIN.irp.f:  10

@@ -1,7 +1,6 @@
     SUBROUTINE INP
     PARAMETER(natomax=400)
 
-    integer atoms
     double precision atyp(natomax)
 !   double precision xx(natomax),yy(natomax),zz(natomax)
     double precision xx(natomax),yy(natomax),zz(natomax)
@@ -21,7 +20,7 @@
 ! ============================================================
 ! reading inputs from .inp
 ! ============================================================
-    read(11,*)atoms;
+!   read(11,*)atoms;
 
     write(6,*)'No of atoms: ',atoms
     write(6,*)'coordinates: '
@@ -35,9 +34,9 @@
 
     enddo
 
-    call DIST(atoms)
-    call ANGLES(atoms)
-    call HUCKEL(atoms)
-    call MOLDEN(atoms)
+    call DIST
+    call ANGLES
+    call HUCKEL
+    call MOLDEN
 
     end

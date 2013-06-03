@@ -1,7 +1,6 @@
-        SUBROUTINE HUCKEL(atoms)
+        SUBROUTINE HUCKEL
         PARAMETER(natomax=400)
 
-        integer atoms
         double precision atyp(natomax)
         double precision xx(natomax),yy(natomax),zz(natomax)
         double precision ddist(natomax,natomax)

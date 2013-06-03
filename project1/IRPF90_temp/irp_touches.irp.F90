@@ -10,6 +10,7 @@ subroutine irp_finalize_1733191211
  use BETA_mod
  use HUCKEL_mod
  use DIST_mod
+ use atoms_mod
  use basis_mod
  use nucrep_mod
  use INP_mod

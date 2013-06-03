@@ -1,8 +1,7 @@
-        SUBROUTINE ANGLES(atoms)
+        SUBROUTINE ANGLES
 
         PARAMETER(natomax=400)
         integer i,j
-        integer atoms
         real pi,edote
         double precision atyp(natomax)
         double precision ex(natomax,natomax),ey(natomax,natomax),ez(natomax,natomax)
