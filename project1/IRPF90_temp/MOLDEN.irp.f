@@ -1,7 +1,8 @@
-        SUBROUTINE MOLDEN(atoms)
+        SUBROUTINE MOLDEN
         PARAMETER(natomax=400)
 
-        integer atoms,N,k
+!       integer atoms,N,k
+        integer N,k
         double precision BTA                ! Bohrs to Angs
         double precision atyp(natomax)
         double precision xx(natomax),yy(natomax),zz(natomax)
@@ -42,6 +43,7 @@
         write(6,*)N
 
         touch ngauss
+        touch atoms
 ! ============================================================
 ! writing basis (only p orbitals)
 ! ============================================================

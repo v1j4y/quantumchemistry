@@ -1,8 +1,8 @@
-        SUBROUTINE ANGLES(atoms)
+        SUBROUTINE ANGLES
 
         PARAMETER(natomax=400)
         integer i,j
-        integer atoms
+!       integer atoms
         real pi,edote
         double precision atyp(natomax)
         double precision ex(natomax,natomax),ey(natomax,natomax),ez(natomax,natomax)
@@ -22,6 +22,7 @@
         ey=0
         ez=0
 
+        touch atoms
 ! ============================================================
 ! calculating all possible angles
 ! ============================================================

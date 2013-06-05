@@ -1,7 +1,7 @@
-        SUBROUTINE HUCKEL(atoms)
+        SUBROUTINE HUCKEL
         PARAMETER(natomax=400)
 
-        integer atoms
+!       integer atoms
         double precision atyp(natomax)
         double precision xx(natomax),yy(natomax),zz(natomax)
         double precision ddist(natomax,natomax)
@@ -25,6 +25,7 @@
         common /HUCKL/N
 
         yw = .true.
+        touch atoms
 
         open(unit=44,status='new',file='matH.dat',form='formatted')
         open(unit=51,file='eigenval.dat',form='formatted'&

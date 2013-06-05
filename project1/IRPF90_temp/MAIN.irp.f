@@ -3,7 +3,8 @@
     double precision xx(natomax),yy(natomax),zz(natomax)
 !   common/coord/natom(natomax),x,y,z
     common /coord/xx,yy,zz
-    common /attype/atoms,atype
+!   common /attype/atoms,atype
+    common /attype/atype
 
       write(6,*)'@@@@@@@@  @@@@@@@ @@@@@@@   @@@@@@@@ @@@@@@@  @ '
       write(6,*)'               start'

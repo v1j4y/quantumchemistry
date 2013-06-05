@@ -4,12 +4,19 @@ subroutine touch_ngauss
   ngauss_is_built = .True.
 end subroutine touch_ngauss
 
+subroutine touch_atoms
+  Use atoms_mod
+  implicit none
+  atoms_is_built = .True.
+end subroutine touch_atoms
+
 subroutine irp_finalize_1733191211
  use MOLDEN_mod
  use readbasis_mod
  use BETA_mod
  use HUCKEL_mod
  use DIST_mod
+ use atoms_mod
  use basis_mod
  use nucrep_mod
  use INP_mod
