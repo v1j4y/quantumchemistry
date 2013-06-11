@@ -1,0 +1,6 @@
+    program test_getoverlap
+    implicit none
+    integer :: i
+    print *,'ngauss=',ngauss
+    do i=1,ngauss
+
