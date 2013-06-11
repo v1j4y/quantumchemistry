@@ -1,0 +1,110 @@
+    subroutine printbasis
+    implicit none
+    logical :: is_open,yw
+    integer :: j,nshell,nl,nbasis,nm,atype,numline
+    integer :: k,l,i,EOF
+    double precision ::nexp,ncoef(100)
+    character(len=100) :: line
+    character :: charline1,charline2,charline3
+
+    yw=.TRUE.
+    EOF=1
+    print *,basis
+
+    inquire(unit=201,opened=is_open)
+    if(.not.is_open)then
+        open(unit=201,status='old',file='atyp.dat')
+    endif
+!   inquire(unit=33,opened=is_open)
+!   if(.not.is_open)then
+        open(unit=33,status='old',file='geo.molden',form='formatted',position='append')
+!   endif
+    open(unit=700,status='old',file='STO-3G.basis')
+!   open(unit=701,status='old',file='STO-3G-C')
+!   open(unit=702,status='old',file='STO-3G-O')
+
+    if(basis(1).eq.'S')then
+        do j=1,atoms
+            rewind(700)
+!           rewind(701)
+            read(201,*)atype
+            print *,atype
+            do while(EOF.ge.0)
+                read(700,'(A)')line
+                read(line,'(3A)')charline1,charline2,charline3
+                if(charline1.eq.'A')then
+                    read(charline3,)
+!           if(atype.eq.6)then
+!               read(701,*)nshell
+!               if(yw)then
+!               print *,'__'
+!               write(6,*)j,0
+!               print *,'__'
+!               print *,nshell
+!               endif
+!               write(33,*)j,0
+!               do i=1,nshell
+!                   read(701,*)nbasis,nl,nm
+!                   print *,nbasis
+!                   if(i.eq.1)then
+!                       write(33,*)'s',nbasis,nl
+!                   elseif(i.eq.2)then
+!                       write(33,*)'p',nbasis,nl
+!                   endif
+!                   do k=1,nbasis
+!                       if(i.eq.1)then
+!                       read(701,*)nexp,ncoef(1),ncoef(2)
+!                       write(33,*)nexp,ncoef(1),ncoef(2)
+!                       elseif(i.eq.2)then
+!                       read(701,*)nexp,ncoef(1)
+!                       write(33,*)nexp,ncoef(1)
+!                       endif
+!                   enddo
+!               enddo
+!           elseif(atype.eq.8)then
+!               read(702,*)nshell
+!               if(yw)then
+!               print *,'__'
+!               write(6,*)j,0
+!               print *,'__'
+!               print *,nshell
+!               endif
+!               write(33,*)j,0
+!               do i=1,nshell
+!                   read(702,*)nbasis,nl,nm
+!                   print *,nbasis
+!                   if(i.eq.1)then
+!                       write(33,*)'s',nbasis,nl
+!                   elseif(i.eq.2)then
+!                       write(33,*)'p',nbasis,nl
+!                   endif
+!                   do k=1,nbasis
+!                       if(i.eq.1)then
+!                       read(702,*)nexp,ncoef(1),ncoef(2)
+!                       write(33,*)nexp,ncoef(1),ncoef(2)
+!                       elseif(i.eq.2)then
+!                       read(702,*)nexp,ncoef(1)
+!                       write(33,*)nexp,ncoef(1)
+!                       endif
+!                   enddo
+!               enddo
+!           elseif(atype.eq.1)then
+!               read(700,*)nshell
+!               write(33,*)j,0
+!               if(yw)then
+!               print *,nshell
+!               endif
+!               do i=1,nshell
+!                   read(700,*)nbasis,nl,nm
+!                   write(33,*)'s',nbasis,nl
+!                   do k=1,nbasis
+!                       read(700,*)nexp,ncoef(1)
+!                       write(33,*)nexp,ncoef(1)
+!                   enddo
+!               enddo
+!           endif
+        enddo
+    endif
+
+    end
+
