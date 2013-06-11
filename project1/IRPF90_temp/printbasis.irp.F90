@@ -14,7 +14,7 @@
             double precision :: array1(100)                      ! printbasis.irp.f:   4
             integer :: i,j,k,nui,nuj,nuk                         ! printbasis.irp.f:   5
             integer :: atype                                     ! printbasis.irp.f:   6
-            character(len=100)  :: array2                        ! printbasis.irp.f:   7
+            character(len=50)  :: array2                         ! printbasis.irp.f:   7
             character :: char1,char2,char3,char4                 ! printbasis.irp.f:   8
             integer :: EOF                                       ! printbasis.irp.f:   9
             logical :: counti,yw,is_open,countw                  ! printbasis.irp.f:  10
@@ -49,38 +49,43 @@
                 if(countw)then                                   ! printbasis.irp.f:  37
                 read(array2,'(3A)')char1,char2,char3             ! printbasis.irp.f:  38
                 if(char1.ne.'$'.and.char1.ne.'A')then            ! printbasis.irp.f:  39
-                write(33,*)char1                                 ! printbasis.irp.f:  40
-                write(33,'(10A)')array2                          ! printbasis.irp.f:  41
-                endif                                            ! printbasis.irp.f:  42
-                endif                                            ! printbasis.irp.f:  43
-                else                                             ! printbasis.irp.f:  44
-                read(array2,'(4A)')char1,char2,char3,char4       ! printbasis.irp.f:  45
-                if(countw)then                                   ! printbasis.irp.f:  46
-                read(array2,'(3A)')char1,char2,char3             ! printbasis.irp.f:  47
-                if(char1.ne.'$'.and.char1.ne.'A')then            ! printbasis.irp.f:  48
-                print *,char1                                    ! printbasis.irp.f:  49
-                write(33,'(10A)')array2                          ! printbasis.irp.f:  50
-                endif                                            ! printbasis.irp.f:  51
-                endif                                            ! printbasis.irp.f:  52
-                endif                                            ! printbasis.irp.f:  53
-                if(char1.eq.'A')then                             ! printbasis.irp.f:  54
-                    countw=.FALSE.                               ! printbasis.irp.f:  55
-                    print *,'A'                                  ! printbasis.irp.f:  56
-                    read(char3,*)nui                             ! printbasis.irp.f:  57
-                    if(counti)then                               ! printbasis.irp.f:  58
-                    read(char4,*)nuj                             ! printbasis.irp.f:  59
-                    nuk=nui*10+nuj                               ! printbasis.irp.f:  60
-                    else                                         ! printbasis.irp.f:  61
-                    nuk=nui                                      ! printbasis.irp.f:  62
-                    endif                                        ! printbasis.irp.f:  63
-                    if(nui.eq.9) then                            ! printbasis.irp.f:  64
-counti=.TRUE.                                                    ! printbasis.irp.f:  64
-  endif                                                          ! printbasis.irp.f:  64
-                if(nuk.eq.atype)then                             ! printbasis.irp.f:  65
-                    write(33,*)i,0                               ! printbasis.irp.f:  66
-                    countw=.TRUE.                                ! printbasis.irp.f:  67
-                endif                                            ! printbasis.irp.f:  68
-                endif                                            ! printbasis.irp.f:  69
-            enddo                                                ! printbasis.irp.f:  70
-            enddo                                                ! printbasis.irp.f:  71
-end                                                              ! printbasis.irp.f:  72
+                write(33,1001)char1                              ! printbasis.irp.f:  41
+                write(33,1000)array2                             ! printbasis.irp.f:  43
+                endif                                            ! printbasis.irp.f:  44
+                endif                                            ! printbasis.irp.f:  45
+                else                                             ! printbasis.irp.f:  46
+                read(array2,'(4A)')char1,char2,char3,char4       ! printbasis.irp.f:  47
+                if(countw)then                                   ! printbasis.irp.f:  48
+                read(array2,'(3A)')char1,char2,char3             ! printbasis.irp.f:  49
+                if(char1.ne.'$'.and.char1.ne.'A')then            ! printbasis.irp.f:  50
+                print *,char1                                    ! printbasis.irp.f:  51
+                write(33,1001)char1                              ! printbasis.irp.f:  52
+                write(33,1000)array2                             ! printbasis.irp.f:  55
+                endif                                            ! printbasis.irp.f:  56
+                endif                                            ! printbasis.irp.f:  57
+                endif                                            ! printbasis.irp.f:  58
+                if(char1.eq.'A')then                             ! printbasis.irp.f:  59
+                    countw=.FALSE.                               ! printbasis.irp.f:  60
+                    print *,'A'                                  ! printbasis.irp.f:  61
+                    read(char3,*)nui                             ! printbasis.irp.f:  62
+                    if(counti)then                               ! printbasis.irp.f:  63
+                    read(char4,*)nuj                             ! printbasis.irp.f:  64
+                    nuk=nui*10+nuj                               ! printbasis.irp.f:  65
+                    else                                         ! printbasis.irp.f:  66
+                    nuk=nui                                      ! printbasis.irp.f:  67
+                    endif                                        ! printbasis.irp.f:  68
+                    if(nui.eq.9) then                            ! printbasis.irp.f:  69
+counti=.TRUE.                                                    ! printbasis.irp.f:  69
+  endif                                                          ! printbasis.irp.f:  69
+                if(nuk.eq.atype)then                             ! printbasis.irp.f:  70
+                    write(33,1001)                               ! printbasis.irp.f:  71
+                    write(33,1002)i                              ! printbasis.irp.f:  72
+                    countw=.TRUE.                                ! printbasis.irp.f:  73
+                endif                                            ! printbasis.irp.f:  74
+                endif                                            ! printbasis.irp.f:  75
+            enddo                                                ! printbasis.irp.f:  76
+            enddo                                                ! printbasis.irp.f:  77
+1000  FORMAT (1A,$)                                              ! printbasis.irp.f:  78
+1001  FORMAT (1A)                                                ! printbasis.irp.f:  79
+1002  FORMAT (I1,' 0',$)                                         ! printbasis.irp.f:  80
+end                                                              ! printbasis.irp.f:  81

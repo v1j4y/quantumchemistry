@@ -1,37 +1,36 @@
 $Basis = STO-3G
 $
 $ Elements supported
-$ H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu 
-$ Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Rh Rh Pd Ag Cd 
+$ H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca Sc Ti V Cr Mn Fe Co Ni Cu
+$ Zn Ga Ge As Se Br Kr Rb Sr Y Zr Nb Mo Tc Rh Rh Pd Ag Cd
 $
 $  REFERENCE
-$ Elements      Contraction                       References                     
-$ H - He: (3s)         -> [1s]       W.J. Hehre, R.F. Stewart and J.A. Pople,    
-$ Li - Ne: (6s,3p)     -> [2s,1p]    J. Chem. Phys. 2657 (1969).                 
-$ Na - Ar: (9s,6p)     -> [3s,2p]    W.J. Hehre, R. Ditchfield, R.F. Stewart,    
-$                                    J.A. Pople, J. Chem. Phys.  2769 (1970).    
-$ K,Ca - : (12s,9p)    -> [4s,3p]    W.J. Pietro, B.A. Levy, W.J. Hehre and R.F. 
-$ Ga - Kr                            Stewart, Inorg. Chem. 19, 2225 (1980). 
-$ Sc - Zn: (12s,9p,3d) -> [4s,3p,1d] W.J. Pietro and W.J. Hehre, J. Comp. Chem.  
-$ Y - Cd: (15s,12p,6d) -> [5s,4p,2d] 4, 241 (1983).                              
+$ Elements      Contraction                       References
+$ H - He: (3s)         -> [1s]       W.J. Hehre, R.F. Stewart and J.A. Pople,
+$ Li - Ne: (6s,3p)     -> [2s,1p]    J. Chem. Phys. 2657 (1969).
+$ Na - Ar: (9s,6p)     -> [3s,2p]    W.J. Hehre, R. Ditchfield, R.F. Stewart,
+$                                    J.A. Pople, J. Chem. Phys.  2769 (1970).
+$ K,Ca - : (12s,9p)    -> [4s,3p]    W.J. Pietro, B.A. Levy, W.J. Hehre and R.F.
+$ Ga - Kr                            Stewart, Inorg. Chem. 19, 2225 (1980).
+$ Sc - Zn: (12s,9p,3d) -> [4s,3p,1d] W.J. Pietro and W.J. Hehre, J. Comp. Chem.
+$ Y - Cd: (15s,12p,6d) -> [5s,4p,2d] 4, 241 (1983).
 $***********************************************************************
 A 1
-$ HYDROGEN     (3S) -> [1S]                                      
+$ HYDROGEN     (3S) -> [1S]
 $ S-TYPE FUNCTIONS
     3    1    0
       3.4252509  0.15432897
       0.6239137  0.53532814
       0.1688554  0.44463454
-
 A 2
-$ HELIUM       (3S) -> [1S]                                      
+$ HELIUM       (3S) -> [1S]
 $ S-TYPE FUNCTIONS
     3    1    0
       6.3624214  0.15432897
       1.1589230  0.53532814
       0.3136498  0.44463454
 A 3
-$ LITHIUM      (6S,3P) -> [2S,1P]                                
+$ LITHIUM      (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
      16.1195750  0.15432897  0.00000000
@@ -46,7 +45,7 @@ $ P-TYPE FUNCTIONS
       0.1478601  0.60768372
       0.0480887  0.39195739
 A 4
-$ BERYLLIUM    (6S,3P) -> [2S,1P]                                
+$ BERYLLIUM    (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
      30.1678710  0.15432897  0.00000000
@@ -61,7 +60,7 @@ $ P-TYPE FUNCTIONS
       0.3055389  0.60768372
       0.0993707  0.39195739
 A 5
-$ BORON        (6S,3P) -> [2S,1P]                                
+$ BORON        (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
      48.7911130  0.15432897  0.00000000
@@ -76,7 +75,7 @@ $ P-TYPE FUNCTIONS
       0.5198205  0.60768372
       0.1690618  0.39195739
 A 6
-$ CARBON       (6S,3P) -> [2S,1P]                                
+$ CARBON       (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
      71.6168370  0.15432897  0.00000000
@@ -91,7 +90,7 @@ $ P-TYPE FUNCTIONS
       0.6834831  0.60768372
       0.2222899  0.39195739
 A 7
-$ NITROGEN     (6S,3P) -> [2S,1P]                                
+$ NITROGEN     (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
      99.1061690  0.15432897  0.00000000
@@ -106,7 +105,7 @@ $ P-TYPE FUNCTIONS
       0.8784966  0.60768372
       0.2857144  0.39195739
 A 8
-$ OXYGEN       (6S,3P) -> [2S,1P]                                
+$ OXYGEN       (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
     130.7093200  0.15432897  0.00000000
@@ -121,7 +120,7 @@ $ P-TYPE FUNCTIONS
       1.1695961  0.60768372
       0.3803890  0.39195739
 A 9
-$ FLUORINE     (6S,3P) -> [2S,1P]                                
+$ FLUORINE     (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
     166.6791300  0.15432897  0.00000000
@@ -136,7 +135,7 @@ $ P-TYPE FUNCTIONS
       1.5022812  0.60768372
       0.4885885  0.39195739
 A 10
-$ NEON         (6S,3P) -> [2S,1P]                                
+$ NEON         (6S,3P) -> [2S,1P]
 $ S-TYPE FUNCTIONS
     6    2    0
     207.0156100  0.15432897  0.00000000
@@ -151,7 +150,7 @@ $ P-TYPE FUNCTIONS
       1.9162662  0.60768372
       0.6232293  0.39195739
 A 11
-$ SODIUM       (9S,6P) -> [3S,2P]                                
+$ SODIUM       (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     250.7724000  0.15432900  0.00000000  0.00000000
@@ -172,7 +171,7 @@ $ P-TYPE FUNCTIONS
       0.4125650  0.00000000  0.59516700
       0.1614750  0.00000000  0.46200100
 A 12
-$ MAGNESIUM    (9S,6P) -> [3S,2P]                                
+$ MAGNESIUM    (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     299.2374000  0.15432900  0.00000000  0.00000000
@@ -193,7 +192,7 @@ $ P-TYPE FUNCTIONS
       0.3893260  0.00000000  0.59516700
       0.1523800  0.00000000  0.46200100
 A 13
-$ ALUMINUM     (9S,6P) -> [3S,2P]                                
+$ ALUMINUM     (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     351.4215000  0.15432900  0.00000000  0.00000000
@@ -214,7 +213,7 @@ $ P-TYPE FUNCTIONS
       0.3893260  0.00000000  0.59516700
       0.1523800  0.00000000  0.46200100
 A 14
-$ SILICON      (9S,6P) -> [3S,2P]                                
+$ SILICON      (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     407.7974000  0.15432900  0.00000000  0.00000000
@@ -235,7 +234,7 @@ $ P-TYPE FUNCTIONS
       0.4125650  0.00000000  0.59516700
       0.1614750  0.00000000  0.46200100
 A 15
-$ PHOSPHORUS   (9S,6P) -> [3S,2P]                                
+$ PHOSPHORUS   (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     468.3655000  0.15432900  0.00000000  0.00000000
@@ -256,7 +255,7 @@ $ P-TYPE FUNCTIONS
       0.4863210  0.00000000  0.59516700
       0.1903430  0.00000000  0.46200100
 A 16
-$ SULFUR       (9S,6P) -> [3S,2P]                                
+$ SULFUR       (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     533.1256000  0.15432900  0.00000000  0.00000000
@@ -277,7 +276,7 @@ $ P-TYPE FUNCTIONS
       0.5661400  0.00000000  0.59516700
       0.2215830  0.00000000  0.46200100
 A 17
-$ CHLORINE     (9S,6P) -> [3S,2P]                                
+$ CHLORINE     (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     601.3455000  0.15432900  0.00000000  0.00000000
@@ -298,7 +297,7 @@ $ P-TYPE FUNCTIONS
       0.5940930  0.00000000  0.59516700
       0.2325240  0.00000000  0.46200100
 A 18
-$ ARGON        (9S,6P) -> [3S,2P]                                
+$ ARGON        (9S,6P) -> [3S,2P]
 $ S-TYPE FUNCTIONS
     9    3    0
     674.4463000  0.15432900  0.00000000  0.00000000
@@ -319,7 +318,7 @@ $ P-TYPE FUNCTIONS
       0.7313540  0.00000000  0.59516700
       0.2862470  0.00000000  0.46200100
 A 19
-$ POTASSIUM (KALIUM)    (12S,9P) -> [4S,3P]                               
+$ POTASSIUM (KALIUM)    (12S,9P) -> [4S,3P]
 $ S-TYPE FUNCTIONS
    12    4    0
     771.5104000  0.15432897  0.00000000  0.00000000  0.00000000
@@ -346,7 +345,7 @@ $ P-TYPE FUNCTIONS
       0.1860010  0.00000000  0.00000000  0.57152276
       0.0821401  0.00000000  0.00000000  0.54989495
 A 20
-$ CALCIUM      (12S,9P) -> [4S,3P]                               
+$ CALCIUM      (12S,9P) -> [4S,3P]
 $ S-TYPE FUNCTIONS
    12    4    0
     854.0324951  0.15432897  0.00000000  0.00000000  0.00000000
@@ -373,7 +372,7 @@ $ P-TYPE FUNCTIONS
       0.1682369  0.00000000  0.00000000  0.57152276
       0.0742952  0.00000000  0.00000000  0.54989495
 a 21
-$ SCANDIUM     (12S,9P,3D) -> [4S,3P,1D]                         
+$ SCANDIUM     (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
     941.6624250  0.15432897  0.00000000  0.00000000  0.00000000
@@ -405,7 +404,7 @@ $ D-TYPE FUNCTIONS
       0.1682861  0.65554736
       0.0649300  0.28657326
 a 22
-$ TITANIUM     (12S,9P,3D) -> [4S,3P,1D]                         
+$ TITANIUM     (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1033.5712450  0.15432897  0.00000000  0.00000000  0.00000000
@@ -437,7 +436,7 @@ $ D-TYPE FUNCTIONS
       0.5020767  0.65554736
       0.1937168  0.28657326
 a 23
-$ VANADIUM     (12S,9P,3D) -> [4S,3P,1D]                         
+$ VANADIUM     (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1130.7625170  0.15432897  0.00000000  0.00000000  0.00000000
@@ -469,7 +468,7 @@ $ D-TYPE FUNCTIONS
       0.9043640  0.65554736
       0.3489317  0.28657326
 a 24
-$ CHROMIUM     (12S,9P,3D) -> [4S,3P,1D]                         
+$ CHROMIUM     (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1232.3204500  0.15432897  0.00000000  0.00000000  0.00000000
@@ -501,7 +500,7 @@ $ D-TYPE FUNCTIONS
       1.2937864  0.65554736
       0.4991830  0.28657326
 a 25
-$ MANGANESE    (12S,9P,3D) -> [4S,3P,1D]                         
+$ MANGANESE    (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1337.1532660  0.15432897  0.00000000  0.00000000  0.00000000
@@ -533,7 +532,7 @@ $ D-TYPE FUNCTIONS
       1.6553929  0.65554736
       0.6387020  0.28657326
 a 26
-$ IRON         (12S,9P,3D) -> [4S,3P,1D]                         
+$ IRON         (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1447.4004110  0.15432897  0.00000000  0.00000000  0.00000000
@@ -565,7 +564,7 @@ $ D-TYPE FUNCTIONS
       1.9558044  0.65554736
       0.7546102  0.28657326
 a 27
-$ COBALT       (12S,9P,3D) -> [4S,3P,1D]                         
+$ COBALT       (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1557.2987040  0.15432897  0.00000000  0.00000000  0.00000000
@@ -597,7 +596,7 @@ $ D-TYPE FUNCTIONS
       2.3379252  0.65554736
       0.9020442  0.28657326
 a 28
-$ NICKEL       (12S,9P,3D) -> [4S,3P,1D]                         
+$ NICKEL       (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1679.7710280  0.15432897  0.00000000  0.00000000  0.00000000
@@ -629,7 +628,7 @@ $ D-TYPE FUNCTIONS
       2.6317304  0.65554736
       1.0154034  0.28657326
 a 29
-$ COPPER       (12S,9P,3D) -> [4S,3P,1D]                         
+$ COPPER       (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1801.8067300  0.15432897  0.00000000  0.00000000  0.00000000
@@ -661,7 +660,7 @@ $ D-TYPE FUNCTIONS
       2.9429207  0.65554736
       1.1354703  0.28657326
 a 30
-$ ZINC         (12S,9P,3D) -> [4S,3P,1D]                         
+$ ZINC         (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    1929.4323010  0.15432897  0.00000000  0.00000000  0.00000000
@@ -694,7 +693,7 @@ $ D-TYPE FUNCTIONS
       1.2884046  0.28657326
 
 a 31
-$ GALLIUM      (12S,9P,3D) -> [4S,3P,1D]                         
+$ GALLIUM      (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    2061.4245320  0.15432897  0.00000000  0.00000000  0.00000000
@@ -727,7 +726,7 @@ $ D-TYPE FUNCTIONS
       1.4846757  0.28657326
 
 a 32
-$ GERMANIUM    (12S,9P,3D) -> [4S,3P,1D]                         
+$ GERMANIUM    (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    2196.3842290  0.15432897  0.00000000  0.00000000  0.00000000
@@ -760,7 +759,7 @@ $ D-TYPE FUNCTIONS
       1.6708155  0.28657326
 
 a 33
-$ ARSENIC      (12S,9P,3D) -> [4S,3P,1D]                         
+$ ARSENIC      (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    2337.0656730  0.15432897  0.00000000  0.00000000  0.00000000
@@ -793,7 +792,7 @@ $ D-TYPE FUNCTIONS
       1.8679452  0.28657326
 
 a 34
-$ SELENIUM     (12S,9P,3D) -> [4S,3P,1D]                         
+$ SELENIUM     (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    2480.6268140  0.15432897  0.00000000  0.00000000  0.00000000
@@ -826,7 +825,7 @@ $ D-TYPE FUNCTIONS
       2.0760647  0.28657326
 
 a 35
-$ BROMINE      (12S,9P,3D) -> [4S,3P,1D]                         
+$ BROMINE      (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    2629.9974710  0.15432897  0.00000000  0.00000000  0.00000000
@@ -859,7 +858,7 @@ $ D-TYPE FUNCTIONS
       2.2951739  0.28657326
 
 a 36
-$ KRYPTON      (12S,9P,3D) -> [4S,3P,1D]                         
+$ KRYPTON      (12S,9P,3D) -> [4S,3P,1D]
 $ S-TYPE FUNCTIONS
    12    4    0
    2782.1600550  0.15432897  0.00000000  0.00000000  0.00000000
@@ -892,7 +891,7 @@ $ D-TYPE FUNCTIONS
       2.5252730  0.28657326
 
 a 37
-$ RUBIDIUM     (15S,12P,3D) -> [5S,4P,1D]                        
+$ RUBIDIUM     (15S,12P,3D) -> [5S,4P,1D]
 $ S-TYPE FUNCTIONS
    15    5    0
    2938.6015290  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -931,7 +930,7 @@ $ D-TYPE FUNCTIONS
       2.7663619  0.28657326
 
 a 38
-$ STRONTIUM    (15S,12P,3D) -> [5S,4P,1D]                        
+$ STRONTIUM    (15S,12P,3D) -> [5S,4P,1D]
 $ S-TYPE FUNCTIONS
    15    5    0
    3100.9839510  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -970,7 +969,7 @@ $ D-TYPE FUNCTIONS
       3.0103968  0.28657326
 
 a 39
-$ YTTRIUM      (15S,12P,6D) -> [5S,4P,2D]                        
+$ YTTRIUM      (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    3266.0268690  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1012,7 +1011,7 @@ $ D-TYPE FUNCTIONS
       0.4728610  0.00000000  0.30524682
 
 a 40
-$ ZIRCONIUM    (15S,12P,6D) -> [5S,4P,2D]                        
+$ ZIRCONIUM    (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    3435.3486770  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1054,7 +1053,7 @@ $ D-TYPE FUNCTIONS
       0.1158255  0.00000000  0.30524682
 
 a 41
-$ NIOBIUM      (15S,12P,6D) -> [5S,4P,2D]                        
+$ NIOBIUM      (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    3610.7428640  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1096,7 +1095,7 @@ $ D-TYPE FUNCTIONS
       0.2305291  0.00000000  0.30524682
 
 a 42
-$ MOLYBDENUM   (15S,12P,6D) -> [5S,4P,2D]                        
+$ MOLYBDENUM   (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    3788.6661150  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1138,7 +1137,7 @@ $ D-TYPE FUNCTIONS
       0.2917634  0.00000000  0.30524682
 
 a 43
-$ TECHNETIUM   (15S,12P,6D) -> [5S,4P,2D]                        
+$ TECHNETIUM   (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    3970.8682570  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1180,7 +1179,7 @@ $ D-TYPE FUNCTIONS
       0.3602018  0.00000000  0.30524682
 
 a 44
-$ RUTHENIUM    (15S,12P,6D) -> [5S,4P,2D]                        
+$ RUTHENIUM    (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    4159.2742100  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1222,7 +1221,7 @@ $ D-TYPE FUNCTIONS
       0.4098296  0.00000000  0.30524682
 
 a 45
-$ RHODIUM      (15S,12P,6D) -> [5S,4P,2D]                        
+$ RHODIUM      (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    4350.0777940  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1264,7 +1263,7 @@ $ D-TYPE FUNCTIONS
       0.4763668  0.00000000  0.30524682
 
 a 46
-$ PALLADIUM    (15S,12P,6D) -> [5S,4P,2D]                        
+$ PALLADIUM    (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    4545.1602690  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1306,7 +1305,7 @@ $ D-TYPE FUNCTIONS
       0.5186905  0.00000000  0.30524682
 
 a 47
-$ SILVER       (15S,12P,6D) -> [5S,4P,2D]                        
+$ SILVER       (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    4744.5216340  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
@@ -1348,7 +1347,7 @@ $ D-TYPE FUNCTIONS
       0.5628152  0.00000000  0.30524682
 
 a 48
-$ CADMIUM      (15S,12P,6D) -> [5S,4P,2D]                        
+$ CADMIUM      (15S,12P,6D) -> [5S,4P,2D]
 $ S-TYPE FUNCTIONS
    15    5    0
    4950.2619050  0.15432897  0.00000000  0.00000000  0.00000000  0.00000000
