@@ -37,10 +37,9 @@
                 if(countw)then
                 read(array2,'(3A)')char1,char2,char3
                 if(char1.ne.'$'.and.char1.ne.'A')then
-!               write(33,*)char1
-                write(33,1001)char1
 !               write(33,'(10A),$')array2
                 write(33,1000)array2
+                write(33,*)
                 endif
                 endif
                 else
@@ -53,6 +52,7 @@
 !               write(33,'(10A),$')array2
 !               write(33,'(10A),$')array2
                 write(33,1000)array2
+                write(33,*)
                 endif
                 endif
                 endif

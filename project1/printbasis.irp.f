@@ -39,6 +39,7 @@
                 if(char1.ne.'$'.and.char1.ne.'A')then
 !               write(33,'(10A),$')array2
                 write(33,1000)array2
+                write(33,*)
                 endif
                 endif
                 else
@@ -51,6 +52,7 @@
 !               write(33,'(10A),$')array2
 !               write(33,'(10A),$')array2
                 write(33,1000)array2
+                write(33,*)
                 endif
                 endif
                 endif

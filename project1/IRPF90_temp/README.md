@@ -6,8 +6,11 @@ Project 1
 * bond angles              - in ANGLES
 
 =======
+implemented in irpf90 !
+=======
 * Reading co-ordinates - in INP
 * bond lengths         - in DIST (verified)
 * bond angles          - in ANGLES
+* prints basis         - in printbasis
 * symmetry
 

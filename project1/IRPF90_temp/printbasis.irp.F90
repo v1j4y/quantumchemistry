@@ -49,18 +49,19 @@
                 if(countw)then                                   ! printbasis.irp.f:  37
                 read(array2,'(3A)')char1,char2,char3             ! printbasis.irp.f:  38
                 if(char1.ne.'$'.and.char1.ne.'A')then            ! printbasis.irp.f:  39
-                write(33,1001)char1                              ! printbasis.irp.f:  41
-                write(33,1000)array2                             ! printbasis.irp.f:  43
+                write(33,1000)array2                             ! printbasis.irp.f:  41
+                write(33,*)                                      ! printbasis.irp.f:  42
+                endif                                            ! printbasis.irp.f:  43
                 endif                                            ! printbasis.irp.f:  44
-                endif                                            ! printbasis.irp.f:  45
-                else                                             ! printbasis.irp.f:  46
-                read(array2,'(4A)')char1,char2,char3,char4       ! printbasis.irp.f:  47
-                if(countw)then                                   ! printbasis.irp.f:  48
-                read(array2,'(3A)')char1,char2,char3             ! printbasis.irp.f:  49
-                if(char1.ne.'$'.and.char1.ne.'A')then            ! printbasis.irp.f:  50
-                print *,char1                                    ! printbasis.irp.f:  51
-                write(33,1001)char1                              ! printbasis.irp.f:  52
-                write(33,1000)array2                             ! printbasis.irp.f:  55
+                else                                             ! printbasis.irp.f:  45
+                read(array2,'(4A)')char1,char2,char3,char4       ! printbasis.irp.f:  46
+                if(countw)then                                   ! printbasis.irp.f:  47
+                read(array2,'(3A)')char1,char2,char3             ! printbasis.irp.f:  48
+                if(char1.ne.'$'.and.char1.ne.'A')then            ! printbasis.irp.f:  49
+                print *,char1                                    ! printbasis.irp.f:  50
+                write(33,1001)char1                              ! printbasis.irp.f:  51
+                write(33,1000)array2                             ! printbasis.irp.f:  54
+                write(33,*)                                      ! printbasis.irp.f:  55
                 endif                                            ! printbasis.irp.f:  56
                 endif                                            ! printbasis.irp.f:  57
                 endif                                            ! printbasis.irp.f:  58
